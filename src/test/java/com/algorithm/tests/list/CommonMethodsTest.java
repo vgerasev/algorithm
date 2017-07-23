@@ -36,6 +36,24 @@ public class CommonMethodsTest {
         Assert.assertFalse(testObject.isOneContainsTwo(oneList,twoList));
     }
     @Test
+    public void checkStrings_5_Test() {
+        List<String> oneList = new ArrayList<>(Arrays.asList(new String[] {"one", "two"}));
+        List<String> twoList = new ArrayList<>(Arrays.asList(new String[] {"one", "two", "three"}));
+        Assert.assertFalse(testObject.isOneContainsTwo(oneList,twoList));
+    }
+    @Test
+    public void checkStrings_6_Test() {
+        List<String> oneList = new ArrayList<>(Arrays.asList(new String[] {"one", "two"}));
+        List<String> twoList = new ArrayList<>(Arrays.asList(new String[] {"one", "two", "one"}));
+        Assert.assertTrue(testObject.isOneContainsTwo(oneList,twoList));
+    }
+    @Test
+    public void checkStrings_7_Test() {
+        List<String> oneList = new ArrayList<>();
+        List<String> twoList = new ArrayList<>();
+        Assert.assertTrue(testObject.isOneContainsTwo(oneList,twoList));
+    }
+    @Test
     public void checkNull_1_Test() {
         List<String> oneList = new ArrayList<>(Arrays.asList(new String[] {"one", "two"}));
         List<String> twoList = null;
@@ -52,5 +70,11 @@ public class CommonMethodsTest {
         List<Integer> oneList = new ArrayList<>(Arrays.asList(new Integer[] {1, 2}));
         List<Integer> twoList = new ArrayList<>(Arrays.asList(new Integer[] {2}));
         Assert.assertTrue(testObject.isOneContainsTwo(oneList,twoList));
+    }
+    @Test
+    public void checkInts_2_Test() {
+        List<Integer> oneList = new ArrayList<>(Arrays.asList(new Integer[] {1, 2}));
+        List<Integer> twoList = new ArrayList<>(Arrays.asList(new Integer[] {2, 3}));
+        Assert.assertFalse(testObject.isOneContainsTwo(oneList,twoList));
     }
 }
