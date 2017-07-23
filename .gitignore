@@ -110,3 +110,4 @@ gradle-app.setting
 .DS_Store
 .DS_Store?
 ._*
+/.idea/vcs.xml
